@@ -12,8 +12,22 @@ contract Example {
 
     Choices choice = Choices.UP;
 
-    constructor() {
-        console.log(b );
+    constructor(Choices _choice) { 
+        unchecked{
+            a = a + 1;
+        }
+        console.log(a);
+        console.log(b);
+        console.logBytes32(bytes32(b));
+
+        console.logInt(type(int256).min);
+        console.logInt(type(int256).max);
+
+        if (_choice == Choices.UP) {
+            console.log("You chose UP");
+        } else {
+            console.log("You did not choose UP");
+        }
     }
 
 }
