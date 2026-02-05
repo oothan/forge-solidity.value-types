@@ -9,10 +9,11 @@ contract FunctionTest is Test {
     Functions public functions;
 
     function setUp() public {
-        functions = new Functions(2, 2);
+        functions = new Functions(4, 4);
     }
 
     function testFunctions() public {
-        assertEq(functions.sum(), 4);
+        assertEq(functions.sum(), 8);
+        assertEq(functions.product(), 16);
     }
 }

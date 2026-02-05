@@ -4,13 +4,14 @@ pragma solidity ^0.8.33;
 contract Functions {
     
     uint256 public sum;
+    uint256 public product;
 
     constructor(uint256 x, uint256 y) {
-        sum = add(x, y);
+        (sum, product) = math(x, y);
     }
 
-    function add(uint256 x, uint256 y) private pure returns (uint256) {
-        return x + y;
+    function math(uint256 x, uint256 y) private pure returns (uint256, uint256) {
+        return (x + y, x * y);
     }
 
 }
